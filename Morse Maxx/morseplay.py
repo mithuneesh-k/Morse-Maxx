@@ -29,8 +29,8 @@ text_to_morse = {
     '9': '----.',' ':'  '
 }
 
-def mor2txt(aroma):
-    morse = aroma
+def mor2txt(m):
+    morse = m
     morse=morse.rstrip(" ")
     morse=morse.lstrip(" ")
     morse=morse.replace(" "," | ")
@@ -59,8 +59,8 @@ def mor2txt(aroma):
 
     return text
 
-def txt2mor(aavin):
-    text=aavin
+def txt2mor(t):
+    text=t
     orgtext=text
     text=text.upper()
     text=text.replace("\n","")
@@ -71,5 +71,6 @@ def txt2mor(aavin):
         textletter = ltext[aa]
         morse+=text_to_morse[textletter]
         morse+=" "
+
 
     return morse
