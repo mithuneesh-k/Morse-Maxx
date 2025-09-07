@@ -1,4 +1,5 @@
 import morseplay
+import os
 from tkinter import *
 
 # ---------- Functions ---------- #
@@ -24,9 +25,12 @@ def add_copy_button(parent, get_text):
 # ---------- Main Window ---------- #
 morze = Tk()
 morze.title("Morse MAXX")
-morze.configure(bg="#f5f5f5")  # soft background
+morze.configure(bg="#f5f5f5")  
 
-# Container for pages
+icon_path = os.path.join(os.path.dirname(__file__), "icon.ico")
+morze.iconbitmap(icon_path)  
+
+
 container = Frame(morze, bg="#f5f5f5")
 container.pack(fill="both", expand=True)
 
